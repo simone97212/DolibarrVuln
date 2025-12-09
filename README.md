@@ -4,7 +4,9 @@ Research and report by **Simone Biondi**
 
 ---
 Affected product: Dolibarr ERP&CRM
+
 Vulnerability: PrivEsc (HTML injection + CSRF)
+
 Version: 22.0.9 (maybe all before 22*, but not tested)
 
 ## Summary
