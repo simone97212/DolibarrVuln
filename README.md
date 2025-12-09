@@ -1,4 +1,4 @@
-# Privilege Escalation Vulnerability in Dolibarr ERP/CRM
+# Privilege Escalation Vulnerability in Dolibarr ERP & CRM 22.0.9
 
 Research and report by **Simone Biondi**
 
@@ -30,8 +30,14 @@ the attacker **immediately gains admin rights**.
 | Privilege Escalation | Critical |
 | Admin Account Takeover | Critical |
 
-### CVSS v3.1 (preliminary)
+### CVSS v3.1 
 **9.6 — Critical** (AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L)
+
+| CWE | Title |
+|--------------|:-------:|
+| CWE-352 | Cross-Site Request Forgery |
+| CWE-598 | Information Exposure in Query Strings |
+| CWE-284 | Improper Access Control |
 
 ---
 
