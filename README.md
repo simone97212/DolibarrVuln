@@ -85,6 +85,6 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 ## Credits
 
 **Researcher:**  
-👤 *Simone Biondi*  
+*Simone Biondi*  
 
 ---
