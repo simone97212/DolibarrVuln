@@ -6,7 +6,7 @@ Research and report by **Simone Biondi**
 
 ## Summary
 
-A critical vulnerability was identified in Dolibarr ERP/CRM 23 beta where:
+A critical vulnerability was identified in Dolibarr ERP/CRM where:
 
 - **Administrator permission changes** are executed via **HTTP GET**
 - The **anti-CSRF token is exposed in the URL**
@@ -21,14 +21,12 @@ the attacker **immediately gains admin rights**.
 
 | Impacted Area | Severity |
 |--------------|:-------:|
-| Access Control Integrity | 🔥 Critical |
-| Privilege Escalation | 🔥 Critical |
-| Admin Account Takeover | 🔥 Critical |
+| Access Control Integrity | Critical |
+| Privilege Escalation | Critical |
+| Admin Account Takeover | Critical |
 
 ### CVSS v3.1 (preliminary)
 **9.6 — Critical** (AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L)
-
-
 
 ---
 
@@ -51,14 +49,6 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 | ![Screen2](2.png) | Admin view of user rights page |
 | ![Screen3](3.png) | Admin clicking the injected link |
 | ![Screen4](4.png) | Attacker now has admin permissions |
-
----
-
-## Video Proof of Concept
-
- Attached PoC (no harmful payload included):
-
- `video/dolibarr-priv-esc-poc.mp4`
 
 
 ---
