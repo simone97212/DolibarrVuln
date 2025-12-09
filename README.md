@@ -3,6 +3,9 @@
 Research and report by **Simone Biondi**
 
 ---
+Affected product: Dolibarr ERP&CRM
+Vulnerability: PrivEsc (HTML injection + CSRF)
+Version: 22.0.9 (maybe all before 22*, but not tested)
 
 ## Summary
 
@@ -65,7 +68,8 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 
 ## Versions Affected
 
-- Dolibarr > 19*
+- 22.0.9
+- patch: [TBD]
 
 ---
 
@@ -75,7 +79,7 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 |------|-------|
 | 2025-12-03 | Vulnerability discovered |
 | 2025-12-05 | Report sent to Dolibarr Security Team |
-| 2025-XX-XX | Vendor acknowledged receipt |
+| 2025-12-09 | PM the Tech Lead |
 | *Pending* | Fix developed and released |
 | *Pending* | CVE assignment |
 | *Pending* | Public disclosure allowed |
