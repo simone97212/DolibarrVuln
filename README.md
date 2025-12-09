@@ -1,2 +1,100 @@
-# DolibarrVuln
-Vulnerabilities found on Dolibarr
+# Privilege Escalation Vulnerability in Dolibarr ERP/CRM
+
+Research and report by **Simone Biondi**
+
+---
+
+## Summary
+
+A critical vulnerability was identified in Dolibarr ERP/CRM 23 beta where:
+
+- **Administrator permission changes** are executed via **HTTP GET**
+- The **anti-CSRF token is exposed in the URL**
+- Low-privileged users can perform **HTML injection** on notes/fields
+
+When an administrator views the injected content and clicks the link,  
+the attacker **immediately gains admin rights**.
+
+---
+
+## Impact
+
+| Impacted Area | Severity |
+|--------------|:-------:|
+| Access Control Integrity | 🔥 Critical |
+| Privilege Escalation | 🔥 Critical |
+| Admin Account Takeover | 🔥 Critical |
+
+### CVSS v3.1 (preliminary)
+**9.6 — Critical** (AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L)
+
+
+
+---
+
+## Root Causes
+
+- State-changing actions executed via **GET**
+- CSRF token placed in **query string**
+- HTML injection in user-controlled fields
+- No confirmation before privilege modification
+
+The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
+
+---
+
+## Screenshots
+
+| Screenshot | Description |
+|-----------|-------------|
+| ![Screen1](screenshots/screen1.png) | Admin view of user rights page |
+| ![Screen2](screenshots/screen2.png) | Link inserted by low-privileged user |
+| ![Screen3](screenshots/screen3.png) | Admin clicking the injected link |
+| ![Screen4](screenshots/screen4.png) | Attacker now has admin permissions |
+
+---
+
+## Video Proof of Concept
+
+ Attached PoC (no harmful payload included):
+
+ `video/dolibarr-priv-esc-poc.mp4`
+
+
+---
+
+## Mitigations (suggested to vendor)
+
+- Convert **all permission-changing actions** to POST
+- Remove CSRF tokens from URLs (store in POST body)
+- Add confirmation dialog on admin permission changes
+- Add `Referrer-Policy: strict-origin`
+- Additional validation on HTML rendering contexts
+
+---
+
+## Versions Affected
+
+- Dolibarr > 19*
+
+---
+
+## Disclosure Timeline
+
+| Date | Event |
+|------|-------|
+| 2025-12-03 | Vulnerability discovered |
+| 2025-12-05 | Report sent to Dolibarr Security Team |
+| 2025-XX-XX | Vendor acknowledged receipt |
+| *Pending* | Fix developed and released |
+| *Pending* | CVE assignment |
+| *Pending* | Public disclosure allowed |
+
+---
+
+## Credits
+
+**Researcher:**  
+👤 *Simone Biondi*  
+
+---
