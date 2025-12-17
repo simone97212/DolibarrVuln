@@ -31,7 +31,7 @@ the attacker **immediately gains admin rights**.
 | Admin Account Takeover | Critical |
 
 ### CVSS v3.1 
-**9.6 — Critical** (AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:L)
+**9.0 — Critical** (AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H)
 
 | CWE | Title |
 |--------------|:-------:|
