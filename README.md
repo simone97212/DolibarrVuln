@@ -1,4 +1,4 @@
-# Privilege Escalation Vulnerability in Dolibarr ERP & CRM 22.0.9
+# CVE-2025-69634: Privilege Escalation Vulnerability in Dolibarr ERP & CRM 22.0.9
 
 Research and report by **Simone Biondi**
 
@@ -83,14 +83,17 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 
 ## Disclosure Timeline
 
+Following the [policy](../policy.md)
+
 | Date | Event |
 |------|-------|
 | 2025-12-03 | Vulnerability discovered |
-| 2025-12-05 | Report sent to Dolibarr Security Team |
+| 2025-12-04 | Report sent to Dolibarr Security Team |
 | 2025-12-09 | PM the Tech Lead |
+| 2025-12-16 | Request CVE to MITRE (vendor didn't answer) |
 | *Pending* | Fix developed and released |
-| *Pending* | CVE assignment |
-| *Pending* | Public disclosure allowed |
+| 2026-02-05 | CVE assignment |
+| 2026-02-12 | Public disclosure allowed |
 
 ---
 
@@ -100,3 +103,4 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 *Simone Biondi*  
 
 ---
+
