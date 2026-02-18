@@ -86,7 +86,7 @@ The intersection of these behaviors leads to a **Stored Priv-Esc chain attack**.
 
 ## Disclosure Timeline
 
-Following the [policy](../policy.md)
+Following the [policy](https://github.com/simone97212/vuln-research/blob/main/policy.md)
 
 | Date | Event |
 |------|-------|
@@ -98,7 +98,7 @@ Following the [policy](../policy.md)
 | 2026-02-05 | CVE assignment |
 | 2026-02-12 | Public disclosure allowed |
 
-* Vendor disputed the vulnerability, since he afffirms there is no risk to put token inside a GET and for him a user can't never steal it
+* Vendor disputed the vulnerability, since he affirms there is no risk to put token inside a GET and for him a user can't never steal it
 ---
 
 ## Credits
